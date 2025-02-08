@@ -7,8 +7,8 @@ chmod +x build.sh
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 # Tag and push the image
-docker tag test-image sreevadhani/service-tag
-docker push sreevadhani/service-tag  
+docker tag test-image sridinesh/service-tag
+docker push sridinesh/service-tag  
 
 docker pull sreevadhani/service-tag
 docker run -d -p 8000:80 --name=my-service-repo sreevadhani/service-tag
